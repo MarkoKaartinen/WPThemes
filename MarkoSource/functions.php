@@ -18,4 +18,5 @@ if ( function_exists('register_sidebar') ){
 		'after_title' => '</h3>',
 	));
 }
+add_editor_style('editor.css');
 ?>

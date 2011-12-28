@@ -7,11 +7,15 @@ Author URI: http://markokaartinen.net/
 Version: 1.0
 Tags: black, blue, white, two-columns, fixed-width, threaded-comments, sticky-post, microformats, editor-style
 
-License: CC BY-NC-SA 3.0
-License URI: http://creativecommons.org/licenses/by-nc-sa/3.0/
+License: GNU General Public License v2.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Theme powered by Bootstrap, from Twitter (http://twitter.github.com/bootstrap/).
 */
+
+body {
+	
+}
 
 .clear {
 	clear: both;
@@ -21,7 +25,7 @@ Theme powered by Bootstrap, from Twitter (http://twitter.github.com/bootstrap/).
 	text-align: justify;
 }
 
-#menu-valikko {
+#menu-valikko, #menu-valikko ul {
 	list-style: none;
 	margin: 0;
 }
@@ -29,13 +33,33 @@ Theme powered by Bootstrap, from Twitter (http://twitter.github.com/bootstrap/).
 #menu-valikko .menu-item {
 	float: left;
 	padding-right: 15px;
+	position: relative;
+}
+
+#menu-valikko ul {
+	display: none;
+	position:absolute;
+	float: left;
+	z-index: 99999;
+}
+
+#menu-valikko ul li {
+	padding-top:5px;
+}
+
+#menu-valikko ul li ul {
+	margin-left: 5px;
+}
+
+#menu-valikko li:hover > ul {
+	display: block;
 }
 
 #menu-valikko .menu-item a {
   cursor: pointer;
   display: inline-block;
   background-color: #e6e6e6;
-
+  
   padding: 5px 14px 6px;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   color: #333;
