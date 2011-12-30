@@ -12,15 +12,26 @@
 				$posttime = get_the_time("d.m.Y - H:i");
 			}
 			?>
-			<div class="postinfo"><span class="label info"><?php echo $posttime; ?></span> <span class="label info"><?php comments_popup_link( __("Comment" , "markosource"), __("1 comment" , "markosource"), __("%s comments" , "markosource"), 'comments-link', __("Comments closed" , "markosource")); ?></span> <?php if(function_exists('the_views')) { ?><span class="label info"><?php the_views(); ?></span><?php } ?></div>
+			<div class="postinfo">
+				<span class="label info"><?php echo $posttime; ?></span>
+				<span class="label info"><?php comments_popup_link( __("Comment" , "markosource"), __("1 comment" , "markosource"), '% ' . __("comments" , "markosource"), 'comments-link', __("Comments closed" , "markosource")); ?></span>
+				<?php if(function_exists('the_views')) { ?><span class="label info"><?php the_views(); ?></span><?php } ?>
+				<?php if(is_sticky()) { echo ' <span class="label important">' . __('sticky', "markosource") . '</span>'; } ?></div>
 		<?php } ?>
 		
 		<?php the_content(__("Read more", "markosource") ." &raquo;"); ?>
 		
 		<?php 
 		if(!is_page()){
+			if(has_category()){
+				echo '<div class="cats">';
+					the_category('');
+				echo "</div>";
+			}
 			if(has_tag()){
-				the_tags('<div id="tags">', ' ', '</div>');
+				echo '<div class="tagit">';
+					the_tags('', ' ', '');
+				echo '</div>';
 			}
 		}
 		if(!is_page() && !is_single()){
@@ -30,14 +41,28 @@
 	</div>
 </div>
 
+<?php
+if(is_single()){
+	comments_template();
+}
+
+if(is_single() OR is_page()){
+?>
+<!--
+<?php trackback_rdf(); ?>
+-->
+<?php
+}
+?>
+
 <?php endwhile; // End the loop. Whew. ?>
 
 <?php 
 if(function_exists(wp_pagenavi)){
 	wp_pagenavi();
 }else{ 
-	echo '<div class="nav-previous">' . get_next_posts_link( "&larr; " . __( 'Older' ) ).'</div>
-	<div class="nav-next">' . get_previous_posts_link( __( 'Newer' ) . ' &rarr;' ) . '</div>';
+	echo '<div class="nav-previous">' . get_next_posts_link( "&larr; " . __( 'Older', "markosource" ) ).'</div>
+	<div class="nav-next">' . get_previous_posts_link( __( 'Newer', 'markosource' ) . ' &rarr;' ) . '</div>';
 }
 ?>
 <div class="clear"></div>

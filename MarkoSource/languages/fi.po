@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MarkoSource\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-30 15:20+0200\n"
-"PO-Revision-Date: 2011-12-30 15:20+0200\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2011-12-30 20:05+0200\n"
+"PO-Revision-Date: 2011-12-30 20:05+0200\n"
+"Last-Translator: Marko Kaartinen <markokaartinen@gmail.com>\n"
 "Language-Team: MarkoKaartinen.net <marko@kaartinen.me>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,47 +16,117 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
+#: ../comments.php:3
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr "Tämä kirjoitus on salasanasuojattu. Anna salasana nähdäksesi kommentit."
+
+# Comments page header
+#: ../comments.php:18
+msgid "comments at the moment"
+msgstr "kommenttia tähän mennessä"
+
+#: ../comments.php:23
+#: ../comments.php:37
+msgid "Comment navigation"
+msgstr "Kommenttien valikko"
+
+#: ../comments.php:24
+#: ../comments.php:38
+msgid "&larr; Older Comments"
+msgstr "&larr; Vanhemmat"
+
+#: ../comments.php:25
+#: ../comments.php:39
+msgid "Newer Comments &rarr;"
+msgstr "Uudemmat &rarr;"
+
+# Comments closed text
+#: ../comments.php:49
+msgid "Comments are closed."
+msgstr "Kommentointi suljettu."
+
+# Front page Welcome text
 #: ../frontpage.php:1
 msgid "Welcome"
 msgstr "Tervetuloa"
 
+# Front pages latest stories
 #: ../frontpage.php:8
 msgid "Latest stories"
 msgstr "Viimeisimmät jutut"
 
+# No comments text to loop and front page
 #: ../frontpage.php:27
 msgid "No comments"
 msgstr "Ei kommentteja"
 
+# Single comment text
 #: ../frontpage.php:29
-#: ../loop.php:15
+#: ../loop.php:17
 msgid "1 comment"
 msgstr "1 kommentti"
 
+# Example 10 comments text (x comments)
 #: ../frontpage.php:31
-#: ../loop.php:15
 #, php-format
 msgid "%s comments"
 msgstr "%s kommenttia"
 
+# Read more text
 #: ../frontpage.php:47
-#: ../loop.php:18
+#: ../loop.php:22
 msgid "Read more"
 msgstr "Lue lisää"
 
-#: ../loop.php:15
+#: ../functions.php:46
+msgid "says"
+msgstr "sanoo"
+
+#: ../functions.php:49
+msgid "Comment is waiting approval"
+msgstr "Kommenttisi odottaa hyväksyntää"
+
+#: ../functions.php:56
+#, php-format
+msgid "%1$s clock %2$s"
+msgstr "%1$s kello %2$s"
+
+#: ../functions.php:56
+#: ../functions.php:73
+msgid "(edit)"
+msgstr "(muokkaa)"
+
+#: ../functions.php:73
+msgid "Pingback:"
+msgstr "Pingback:"
+
+# Make a comment text
+#: ../loop.php:17
 msgid "Comment"
 msgstr "Kommentoi"
 
-#: ../loop.php:15
+# Example: 10 comments text (x comments)
+#: ../loop.php:17
+msgid "comments"
+msgstr "kommenttia"
+
+# Comments closed text
+#: ../loop.php:17
 msgid "Comments closed"
 msgstr "Kommentointi suljettu"
 
-#: ../loop.php:39
+# text for sticky post
+#: ../loop.php:19
+msgid "sticky"
+msgstr "kiinteä"
+
+# Older posts link at the bottom of page if several posts in blog.
+#: ../loop.php:64
 msgid "Older"
 msgstr "Vanhemmat"
 
-#: ../loop.php:40
+# Newer posts link at the bottom of page if several pages of posts in a blog
+#: ../loop.php:65
 msgid "Newer"
 msgstr "Uudemmat"
 
