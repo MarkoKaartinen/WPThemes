@@ -4,13 +4,13 @@ add_theme_support('post-formats', array( 'link', 'image', 'quote', 'status', 'vi
 
 if (function_exists('register_nav_menu')) {
 	register_nav_menus( array(
-		'primary' => 'Valikko',
+		'primary' => 'Navigation',
 	) );
 }
 
 if ( function_exists('register_sidebar') ){
 	register_sidebar(array(
-		'name' => 'Sivupalkki',
+		'name' => 'Sidebar',
 		'id' => 'widget-area-1',
 		'before_widget' => '<div class="well">',
 		'after_widget' => '</div>',
@@ -19,4 +19,11 @@ if ( function_exists('register_sidebar') ){
 	));
 }
 add_editor_style('editor.css');
+
+load_theme_textdomain('markosource', get_template_directory() . '/languages');
+add_action('after_setup_theme', 'my_theme_setup');
+function my_theme_setup(){
+	load_theme_textdomain('markosource', get_template_directory() . '/languages');
+}
+
 ?>

@@ -1,11 +1,11 @@
-<h2>Tervetuloa!</h2>
+<h2><?php _e("Welcome", "markosource"); ?>!</h2>
 <?php while ( have_posts() ) : the_post(); ?>
 <?php the_content(); ?>
 <?php endwhile; // End the loop. Whew. ?>
 
 <hr />
 
-<h2>Viimeisimmät jutut</h2>
+<h2><?php _e("Latest stories", "markosource"); ?></h2>
 <?php
 $recent_posts = wp_get_recent_posts( array( 'numberposts' => 4, 'post_status' => 'publish' ) );
 $x = 1;
@@ -24,11 +24,11 @@ foreach( $recent_posts as $recent ){
 	
 	$kommentit = $recent['comment_count'];
 	if($kommentit == 0){
-		$komtext = "Ei kommentteja";
+		$komtext = __("No comments", "markosource");
 	}elseif($kommentit == 1){
-		$komtext = "1 kommentti";
+		$komtext = __("1 comment", "markosource");
 	}else{
-		$komtext = "$kommentit kommenttia";
+		$komtext = sprintf( __("%s comments" , "markosource") , $kommentit );
 	}
 
 	if($x == 1 OR $x == 3){
@@ -36,9 +36,15 @@ foreach( $recent_posts as $recent ){
 	}
 
 		echo '<div class="span5">';
-			echo '<h3><a href="' . get_permalink($recent["ID"]) . '" title="Look '.$recent["post_title"].'" >' .   $recent["post_title"].'</a></h3>
-			<p>' . $sisalto . '</p>
-			<p><a class="btn" href="' . get_permalink($recent["ID"]) . '#comments">'.$komtext.'</a> <a class="btn" href="' . get_permalink($recent["ID"]) . '">Lue lis&auml;&auml; &raquo;</a></p>';
+			echo '<h3><a href="' . get_permalink($recent["ID"]) . '" title="Look '.$recent["post_title"].'" >' .   $recent["post_title"].'</a></h3>';
+			if(get_bloginfo("language") == "fi"){
+				$posttime = get_the_time('j. F', $recent["ID"]) . "ta " . get_the_time('Y', $recent["ID"]) . " kello " . get_the_time("H:i", $recent["ID"]);
+			}else{
+				$posttime = get_the_time("d.m.Y - H:i", $recent["ID"]);
+			}
+			echo '<div class="postinfo"><span class="label info">'.$posttime.'</span></div>';
+			echo '<p>' . $sisalto . '</p>
+			<p><a class="btn small" href="' . get_permalink($recent["ID"]) . '#comments">'.$komtext.'</a> <a class="btn small" href="' . get_permalink($recent["ID"]) . '">'.__("Read more", "markosource").' &raquo;</a></p>';
 		echo "</div>";
 		
 	if($x == 2 OR $x == 4){
