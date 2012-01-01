@@ -131,8 +131,10 @@ function theme_about_settings(){
 	<p>You can suggest features and report bugs in <a href="https://github.com/MarkoKaartinen/WPThemes/tree/master/MarkoSource" target="_blank">Github</a> where the whole theme is available.</p>
 	
 	<p><strong>ToDo list for next version</strong><br />
-	&raquo; Post formats<br />
-	</p>';
+	&raquo; Post formats support<br />
+	&raquo; Better browser support<br />
+	&raquo; Social media support<br />
+	&raquo; Bug fixes?</p>';
 	echo "</div>";
 }
 

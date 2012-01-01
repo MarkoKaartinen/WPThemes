@@ -1,7 +1,7 @@
 MarkoSource
 ===========
 
-This is simple Readme for MarkoSource WordPress theme.
+This is simple Readme for MarkoSource WordPress theme. This theme uses Bootstrap from Twitter (http://twitter.github.com/bootstrap/) as a base.
 
 General info
 ------------
@@ -10,7 +10,7 @@ General info
 * Author: Marko Kaartinen
 * Author URI: http://markokaartinen.net/
 * Version: 1.0
-* Tags: white, two-columns, fixed-width, threaded-comments, sticky-post, microformats
+* Tags: white, two-columns, threaded-comments, sticky-post, translation-ready
 * License: GNU General Public License v2.0
 * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
