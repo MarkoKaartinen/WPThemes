@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MarkoSource\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-01 10:56+0200\n"
-"PO-Revision-Date: 2012-01-01 10:56+0200\n"
+"POT-Creation-Date: 2012-01-01 12:39+0200\n"
+"PO-Revision-Date: 2012-01-01 12:40+0200\n"
 "Last-Translator: Marko Kaartinen <markokaartinen@gmail.com>\n"
 "Language-Team: MarkoKaartinen.net <marko@kaartinen.me>\n"
 "MIME-Version: 1.0\n"
@@ -15,6 +15,14 @@ msgstr ""
 "X-Poedit-Country: FINLAND\n"
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:5
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr "Onpas noloa, eikö?"
+
+#: ../404.php:6
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching, or one of the links below, can help."
+msgstr "Näyttää siltä, että emme löydä sitä mitä etsit. Ehkäpä hakeminen tai alla olevat linkit voivat auttaa."
 
 #: ../comments.php:4
 msgid "This post is password protected. Enter the password to view any comments."
@@ -63,6 +71,7 @@ msgstr "Ei kommentteja"
 # Single comment text
 #: ../frontpage.php:29
 #: ../loop.php:17
+#: ../search.php:22
 msgid "1 comment"
 msgstr "1 kommentti"
 
@@ -75,6 +84,7 @@ msgstr "%s kommenttia"
 # Read more text
 #: ../frontpage.php:47
 #: ../loop.php:22
+#: ../search.php:26
 msgid "Read more"
 msgstr "Lue lisää"
 
@@ -142,33 +152,52 @@ msgstr "Tallenna asetukset"
 
 # Make a comment text
 #: ../loop.php:17
+#: ../search.php:22
 msgid "Comment"
 msgstr "Kommentoi"
 
 # Example: 10 comments text (x comments)
 #: ../loop.php:17
+#: ../search.php:22
 msgid "comments"
 msgstr "kommenttia"
 
 # Comments closed text
 #: ../loop.php:17
+#: ../search.php:22
 msgid "Comments closed"
 msgstr "Kommentointi suljettu"
 
 # text for sticky post
 #: ../loop.php:19
+#: ../search.php:24
 msgid "sticky"
 msgstr "kiinteä"
 
 # Older posts link at the bottom of page if several posts in blog.
 #: ../loop.php:65
+#: ../search.php:52
 msgid "Older"
 msgstr "Vanhemmat"
 
 # Newer posts link at the bottom of page if several pages of posts in a blog
 #: ../loop.php:66
+#: ../search.php:52
 msgid "Newer"
 msgstr "Uudemmat"
+
+#: ../search.php:6
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Hakutulokset: %s"
+
+#: ../search.php:58
+msgid "Nothing Found!"
+msgstr "Mitään ei löytynyt!"
+
+#: ../search.php:59
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Pahoittelut, mutta mikään ei vastannut hakuasi. Yritäthän uudestaan eri hakusanoilla."
 
 #~ msgid "About MarkoSource"
 #~ msgstr "Infoa MarkoSourcesta"

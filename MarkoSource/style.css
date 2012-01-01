@@ -588,7 +588,9 @@ h3#reply-title {
 	margin: 12px 0;
 }
 
-#respond .form-submit input {
+#respond .form-submit input,
+#content input[type=submit],
+#sidebar input[type=submit] {
 	cursor: pointer;
 	display: inline-block;
 	background-color: #e6e6e6;
@@ -621,8 +623,22 @@ h3#reply-title {
 	width: auto;
 }
 
-#respond .form-submit input:hover {
+#respond .form-submit input:hover,
+#content input[type=submit],
+#sidebar input[type=submit] {
 	background-position: 0 -15px;
 	color: #333;
 	text-decoration: none;
+}
+
+.screen-reader-text {
+	display: none;
+}
+
+#searchsubmit {
+	padding: 5px 6px 6px !important;
+}
+
+.tagcloud {
+	text-align: justify;
 }
