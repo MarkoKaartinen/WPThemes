@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MarkoSource\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-01 13:01+0200\n"
-"PO-Revision-Date: 2012-01-01 13:02+0200\n"
+"POT-Creation-Date: 2012-01-01 14:56+0200\n"
+"PO-Revision-Date: 2012-01-01 19:33+0200\n"
 "Last-Translator: Marko Kaartinen <markokaartinen@gmail.com>\n"
 "Language-Team: MarkoKaartinen.net <marko@kaartinen.me>\n"
 "MIME-Version: 1.0\n"
@@ -97,51 +97,51 @@ msgid "%1$s clock %2$s"
 msgstr "%1$s kello %2$s"
 
 #: ../functions.php:56
-#: ../functions.php:73
+#: ../functions.php:75
 msgid "(edit)"
 msgstr "(muokkaa)"
 
-#: ../functions.php:73
+#: ../functions.php:75
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: ../functions.php:94
+#: ../functions.php:98
 msgid "MarkoSource - General settings"
 msgstr "MarkoSource - Yleiset asetukset"
 
-#: ../functions.php:95
+#: ../functions.php:99
 msgid "Some settings for MarkoSource. Use these settings to mess the theme. Here are some basic functions and things that you can edit."
 msgstr "Joitain asetuksia MarkoSourceen. Näiden asetuksien avulla voit tuunata teemaa. Tässä joitain perusjuttuja joita voit muokata."
 
-#: ../functions.php:102
+#: ../functions.php:106
 msgid "Settings saved!"
 msgstr "Asetukset tallennettu!"
 
-#: ../functions.php:111
+#: ../functions.php:115
 msgid "Theme options"
 msgstr "Teeman asetukset"
 
-#: ../functions.php:112
+#: ../functions.php:116
 msgid "Hide categories"
 msgstr "Piilota kategoriat"
 
-#: ../functions.php:113
+#: ../functions.php:117
 msgid "Hide tags"
 msgstr "Piilota tagit"
 
-#: ../functions.php:115
+#: ../functions.php:119
 msgid "Ad options"
 msgstr "Mainosten asetukset"
 
-#: ../functions.php:116
+#: ../functions.php:120
 msgid "Posts ad box"
 msgstr "Artikkelien mainoslaatikko"
 
-#: ../functions.php:116
+#: ../functions.php:120
 msgid "(Insert code here)"
 msgstr "(laita koodi tähän)"
 
-#: ../functions.php:119
+#: ../functions.php:123
 msgid "Save settings"
 msgstr "Tallenna asetukset"
 
