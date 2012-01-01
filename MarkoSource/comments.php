@@ -1,3 +1,4 @@
+	<hr />
 	<div id="comments">
 	<?php if ( post_password_required() ) : ?>
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'markosource' ); ?></p>
@@ -14,7 +15,7 @@
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 id="comments-title">
+		<h2 id="comments-title" style="margin-bottom:10px;">
 			<?php echo get_comments_number() . " " . __("comments at the moment", "markosource"); ?>
 		</h2>
 
@@ -39,7 +40,7 @@
 			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'markosource' ) ); ?></div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
-
+		<hr />
 	<?php
 		/* If there are no comments and comments are closed, let's leave a little note, shall we?
 		 * But we don't want the note on pages or post types that do not support comments.

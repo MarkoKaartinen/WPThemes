@@ -378,3 +378,251 @@ div.alignleft {
 	color: #333;
 	text-decoration: none;
 }
+
+.commentlist {
+	list-style: none;
+	margin: 0;
+}
+.commentlist li.comment {
+	border-bottom: 1px solid #e7e7e7;
+	line-height: 20px;
+	margin: 0 0 24px 0;
+	padding: 0 0 0 76px;
+	position: relative;
+}
+.commentlist li:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+#comments .comment-body ul,
+#comments .comment-body ol {
+	margin-bottom: 18px;
+}
+
+#comments .comment-body p {
+	font-size: 13px;
+	line-height: 1.5em;
+	margin-bottom:10px;
+	text-align:justify;
+	color: #000;
+}
+
+#comments .comment-body p:last-child {
+	margin-bottom: 6px;
+}
+#comments .comment-body blockquote p:last-child {
+	margin-bottom: 0px;
+}
+.commentlist ol {
+	list-style: decimal;
+}
+.commentlist .avatar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	border:2px solid #cccccc;
+}
+.comment-author {
+}
+.comment-author cite {
+	color: #000;
+	font-style: normal;
+	font-weight: bold;
+}
+.comment-author .says {
+	font-style: italic;
+}
+.comment-meta {
+	font-size: 12px;
+	margin: 0 0 5px 0;
+}
+.comment-meta a:link,
+.comment-meta a:visited {
+}
+.comment-meta a:active,
+.comment-meta a:hover {
+}
+.commentlist .even {
+}
+.commentlist .bypostauthor {
+}
+.reply {
+	font-size: 12px;
+	padding: 0 0 24px 0;
+}
+.reply a,
+a.comment-edit-link {
+	font-size:12px;
+}
+.reply a:hover,
+a.comment-edit-link:hover {
+}
+.commentlist .children {
+	list-style: none;
+	margin: 0;
+}
+.commentlist .children li {
+	border: none;
+	border-top: 1px solid #cccccc;
+	margin: 0;
+}
+
+.commentlist .children li .comm {
+	padding-top:10px;
+}
+
+.commentlist .children .avatar {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	border:2px solid #cccccc;
+}
+
+.nopassword,
+.nocomments {
+	display: none;
+}
+#comments .pingback {
+	border-bottom: 1px solid #e7e7e7;
+	margin-bottom: 18px;
+	padding-bottom: 18px;
+}
+.commentlist li.comment+li.pingback {
+	margin-top: -6px;
+}
+#comments .pingback p {
+	color: #000000;
+	display: block;
+	font-size: 12px;
+	line-height: 18px;
+	margin: 0;
+}
+#comments .pingback .url {
+	font-size: 13px;
+	font-style: italic;
+}
+
+#respond p {
+}
+
+#respond .comment-notes {
+	margin-bottom: 1em;
+}
+
+.form-allowed-tags {
+	line-height: 1em;
+}
+
+.children #respond {
+	margin: 0 48px 0 0;
+}
+
+h3#reply-title {
+}
+
+#comments-list #respond {
+	margin: 0 0 18px 0;
+}
+
+#comments-list ul #respond {
+	margin: 0;
+}
+
+#cancel-comment-reply-link {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+}
+
+#respond .required {
+	color: #ff4b33;
+	padding-left: 5px;
+	float: left;
+	display: inline-block;
+	position: relative;
+}
+
+#respond .comment-notes .required {
+	float: none;
+	padding: 0;
+}
+
+#respond label {
+	font-size: 14px;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	width: auto;
+	display: inline-block;
+	position: relative;
+	float: left;
+	clear: both;
+}
+
+#respond input {
+	position: relative;
+	margin-bottom: 10px;
+	clear: both;
+	float: left;
+	width: 300px;
+}
+
+#respond textarea {
+	position: relative;
+	padding:4px;
+	width: 610px;
+}
+
+#respond .form-allowed-tags {
+	font-size: 12px;
+	line-height: 18px;
+	width: 620px;
+	margin-top: 5px;
+}
+
+#respond .form-allowed-tags code {
+	font-size: 11px;
+}
+
+#respond .form-submit {
+	margin: 12px 0;
+}
+
+#respond .form-submit input {
+	cursor: pointer;
+	display: inline-block;
+	background-color: #e6e6e6;
+	background-repeat: no-repeat;
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+	background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+	padding: 5px 14px 6px;
+	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	color: #333;
+	font-size: 13px;
+	line-height: normal;
+	border: 1px solid #ccc;
+	border-bottom-color: #bbb;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+	-webkit-transition: 0.1s linear all;
+	-moz-transition: 0.1s linear all;
+	-ms-transition: 0.1s linear all;
+	-o-transition: 0.1s linear all;
+	transition: 0.1s linear all;
+	width: auto;
+}
+
+#respond .form-submit input:hover {
+	background-position: 0 -15px;
+	color: #333;
+	text-decoration: none;
+}

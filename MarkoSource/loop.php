@@ -23,15 +23,19 @@
 		
 		<?php 
 		if(!is_page()){
-			if(has_category()){
-				echo '<div class="cats">';
-					the_category('');
-				echo "</div>";
+			if(get_option("markosource_hidecats") != "1"){
+				if(has_category()){
+					echo '<div class="cats">';
+						the_category('');
+					echo "</div>";
+				}
 			}
-			if(has_tag()){
-				echo '<div class="tagit">';
-					the_tags('', ' ', '');
-				echo '</div>';
+			if(get_option("markosource_hidetags") != "1"){
+				if(has_tag()){
+					echo '<div class="tagit">';
+						the_tags('', ' ', '');
+					echo '</div>';
+				}
 			}
 		}
 		if(!is_page() && !is_single()){
@@ -42,11 +46,8 @@
 </div>
 
 <?php
-if(is_single()){
-	comments_template();
-}
-
 if(is_single() OR is_page()){
+	comments_template();
 ?>
 <!--
 <?php trackback_rdf(); ?>

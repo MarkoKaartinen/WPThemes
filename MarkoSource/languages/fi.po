@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MarkoSource\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-30 20:05+0200\n"
-"PO-Revision-Date: 2011-12-30 20:05+0200\n"
+"POT-Creation-Date: 2012-01-01 10:56+0200\n"
+"PO-Revision-Date: 2012-01-01 10:56+0200\n"
 "Last-Translator: Marko Kaartinen <markokaartinen@gmail.com>\n"
 "Language-Team: MarkoKaartinen.net <marko@kaartinen.me>\n"
 "MIME-Version: 1.0\n"
@@ -16,32 +16,32 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../comments.php:3
+#: ../comments.php:4
 msgid "This post is password protected. Enter the password to view any comments."
 msgstr "Tämä kirjoitus on salasanasuojattu. Anna salasana nähdäksesi kommentit."
 
 # Comments page header
-#: ../comments.php:18
+#: ../comments.php:19
 msgid "comments at the moment"
 msgstr "kommenttia tähän mennessä"
 
-#: ../comments.php:23
-#: ../comments.php:37
+#: ../comments.php:24
+#: ../comments.php:38
 msgid "Comment navigation"
 msgstr "Kommenttien valikko"
 
-#: ../comments.php:24
-#: ../comments.php:38
+#: ../comments.php:25
+#: ../comments.php:39
 msgid "&larr; Older Comments"
 msgstr "&larr; Vanhemmat"
 
-#: ../comments.php:25
-#: ../comments.php:39
+#: ../comments.php:26
+#: ../comments.php:40
 msgid "Newer Comments &rarr;"
 msgstr "Uudemmat &rarr;"
 
 # Comments closed text
-#: ../comments.php:49
+#: ../comments.php:50
 msgid "Comments are closed."
 msgstr "Kommentointi suljettu."
 
@@ -100,6 +100,46 @@ msgstr "(muokkaa)"
 msgid "Pingback:"
 msgstr "Pingback:"
 
+#: ../functions.php:94
+msgid "MarkoSource - General settings"
+msgstr "MarkoSource - Yleiset asetukset"
+
+#: ../functions.php:95
+msgid "Some settings for MarkoSource. Use these settings to mess the theme. Here are some basic functions and things that you can edit."
+msgstr "Joitain asetuksia MarkoSourceen. Näiden asetuksien avulla voit tuunata teemaa. Tässä joitain perusjuttuja joita voit muokata."
+
+#: ../functions.php:102
+msgid "Settings saved!"
+msgstr "Asetukset tallennettu!"
+
+#: ../functions.php:111
+msgid "Theme options"
+msgstr "Teeman asetukset"
+
+#: ../functions.php:112
+msgid "Hide categories"
+msgstr "Piilota kategoriat"
+
+#: ../functions.php:113
+msgid "Hide tags"
+msgstr "Piilota tagit"
+
+#: ../functions.php:115
+msgid "Ad options"
+msgstr "Mainosten asetukset"
+
+#: ../functions.php:116
+msgid "Posts ad box"
+msgstr "Artikkelien mainoslaatikko"
+
+#: ../functions.php:116
+msgid "(Insert code here)"
+msgstr "(laita koodi tähän)"
+
+#: ../functions.php:119
+msgid "Save settings"
+msgstr "Tallenna asetukset"
+
 # Make a comment text
 #: ../loop.php:17
 msgid "Comment"
@@ -121,12 +161,14 @@ msgid "sticky"
 msgstr "kiinteä"
 
 # Older posts link at the bottom of page if several posts in blog.
-#: ../loop.php:64
+#: ../loop.php:65
 msgid "Older"
 msgstr "Vanhemmat"
 
 # Newer posts link at the bottom of page if several pages of posts in a blog
-#: ../loop.php:65
+#: ../loop.php:66
 msgid "Newer"
 msgstr "Uudemmat"
 
+#~ msgid "About MarkoSource"
+#~ msgstr "Infoa MarkoSourcesta"

@@ -70,9 +70,72 @@ function markosource_comment( $comment, $args, $depth ) {
 		case 'trackback' :
 	?>
 	<li class="pingback">
-		<p><?php _e( 'Pingback:', 'markosource' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __('(edit)', 'markosource'), ' ' ); ?></p>
+		<p><strong><?php _e( 'Pingback:', 'markosource' ); ?></strong> <?php comment_author_link(); ?><?php edit_comment_link( __('(edit)', 'markosource'), ' ' ); ?></p>
 
 	<?php
 			break;
 	endswitch;
-}?>
+}
+
+function setup_theme_admin_menus() {
+    add_menu_page('MarkoSource settings', 'MarkoSource', 'manage_options', 'markosource_theme_general', 'theme_settings_page');
+
+    add_submenu_page('markosource_theme_settings', 'General settins', 'General', 'manage_options', 'markosource_theme_general', 'theme_general_settings');
+    
+    add_submenu_page('markosource_theme_general', 'About', 'About', 'manage_options', 'markosource_theme_about', 'theme_about_settings');
+}
+
+function theme_settings_page() {
+}
+
+function theme_general_settings(){
+	echo '<div class="wrap">';
+	screen_icon('themes');
+	echo "<h2>".__("MarkoSource - General settings", "markosource")."</h2>";
+	echo "<p>".__("Some settings for MarkoSource. Use these settings to mess the theme. Here are some basic functions and things that you can edit.", "markosource")."</p>";
+	
+	if (isset($_POST["update_settings"])) {  
+		// Do the saving
+		update_option("markosource_hidecats", esc_attr($_POST["hidecats"]));
+		update_option("markosource_hidetags", esc_attr($_POST["hidetags"]));
+		update_option("markosource_postadbox", esc_attr($_POST["postadbox"]));
+		echo '<div id="message" class="updated">'.__("Settings saved!", "markosource").'</div> ';
+	}
+	
+	//get some defaults
+	$hidecats = get_option("markosource_hidecats");
+	$hidetags = get_option("markosource_hidetags");
+	$postadbox = get_option("markosource_postadbox");
+	?>
+	<form method="POST" action="">
+		<h3><?php _e("Theme options", "markosource"); ?></h3>
+		<p><input type="checkbox" name="hidecats" id="hidecats" value="1"<?php if($hidecats == "1"){ echo ' checked="checked"'; } ?> /><label for="hidecats"> <?php _e("Hide categories", "markosource"); ?></label></p>
+		<p><input type="checkbox" name="hidetags" id="hidetags" value="1"<?php if($hidetags == "1"){ echo ' checked="checked"'; } ?> /><label for="hidetags"> <?php _e("Hide tags", "markosource"); ?></label></p>
+		
+		<h3><?php _e("Ad options", "markosource"); ?></h3>
+		<p><?php _e("Posts ad box", "markosource"); ?> <small><?php _e("(Insert code here)", "markosource"); ?></small><br />
+		<textarea name="postadbox" cols="40" rows="6"><?php echo $postadbox; ?></textarea></p>
+		<input type="hidden" name="update_settings" value="1" />  
+		<input type="submit" value="<?php _e("Save settings", "markosource"); ?>" class="button-primary" />
+	</form>
+	<?php
+	echo "</div>";
+}
+
+function theme_about_settings(){
+	echo '<div class="wrap">';
+	screen_icon('themes');
+	echo "<h2>About MarkoSource</h2>";
+	echo '<p>MarkoSource is made by <a href="http://markokaartinen.net" target="_blank">Marko Kaartinen</a>. MarkoSource uses <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> by Twitter as a base.<br />Theme has some settings and few features like support for WP-PageNavi and WP-PostViews.</p>
+	
+	<p>You can suggest features and report bugs in <a href="https://github.com/MarkoKaartinen/WPThemes/tree/master/MarkoSource" target="_blank">Github</a> where the whole theme is available.</p>
+	
+	<p><strong>ToDo list for next version</strong><br />
+	&raquo; Post formats<br />
+	</p>';
+	echo "</div>";
+}
+
+add_action("admin_menu", "setup_theme_admin_menus");
+
+?>
