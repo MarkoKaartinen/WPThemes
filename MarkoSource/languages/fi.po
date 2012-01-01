@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MarkoSource\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-01 12:39+0200\n"
-"PO-Revision-Date: 2012-01-01 12:40+0200\n"
+"POT-Creation-Date: 2012-01-01 13:01+0200\n"
+"PO-Revision-Date: 2012-01-01 13:02+0200\n"
 "Last-Translator: Marko Kaartinen <markokaartinen@gmail.com>\n"
 "Language-Team: MarkoKaartinen.net <marko@kaartinen.me>\n"
 "MIME-Version: 1.0\n"
@@ -34,22 +34,17 @@ msgid "comments at the moment"
 msgstr "kommenttia tähän mennessä"
 
 #: ../comments.php:24
-#: ../comments.php:38
-msgid "Comment navigation"
-msgstr "Kommenttien valikko"
-
-#: ../comments.php:25
-#: ../comments.php:39
-msgid "&larr; Older Comments"
+#: ../comments.php:40
+msgid "&larr; Older"
 msgstr "&larr; Vanhemmat"
 
-#: ../comments.php:26
-#: ../comments.php:40
-msgid "Newer Comments &rarr;"
+#: ../comments.php:25
+#: ../comments.php:41
+msgid "Newer &rarr;"
 msgstr "Uudemmat &rarr;"
 
 # Comments closed text
-#: ../comments.php:50
+#: ../comments.php:52
 msgid "Comments are closed."
 msgstr "Kommentointi suljettu."
 
@@ -175,14 +170,14 @@ msgid "sticky"
 msgstr "kiinteä"
 
 # Older posts link at the bottom of page if several posts in blog.
-#: ../loop.php:65
-#: ../search.php:52
+#: ../loop.php:68
+#: ../search.php:54
 msgid "Older"
 msgstr "Vanhemmat"
 
 # Newer posts link at the bottom of page if several pages of posts in a blog
-#: ../loop.php:66
-#: ../search.php:52
+#: ../loop.php:69
+#: ../search.php:54
 msgid "Newer"
 msgstr "Uudemmat"
 
@@ -191,13 +186,16 @@ msgstr "Uudemmat"
 msgid "Search Results for: %s"
 msgstr "Hakutulokset: %s"
 
-#: ../search.php:58
+#: ../search.php:60
 msgid "Nothing Found!"
 msgstr "Mitään ei löytynyt!"
 
-#: ../search.php:59
+#: ../search.php:61
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "Pahoittelut, mutta mikään ei vastannut hakuasi. Yritäthän uudestaan eri hakusanoilla."
+
+#~ msgid "Comment navigation"
+#~ msgstr "Kommenttien valikko"
 
 #~ msgid "About MarkoSource"
 #~ msgstr "Infoa MarkoSourcesta"

@@ -55,4 +55,6 @@ foreach( $recent_posts as $recent ){
 	}
 	$x++;
 }
+echo '<div class="clear"></div>';
+echo get_option("markosource_postadbox");
 ?>

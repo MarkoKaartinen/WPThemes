@@ -642,3 +642,8 @@ h3#reply-title {
 .tagcloud {
 	text-align: justify;
 }
+
+#comment-nav-below,
+#comment-nav-above {
+	padding-bottom: 10px;
+}

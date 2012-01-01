@@ -47,7 +47,10 @@
 
 <?php
 if(is_single() OR is_page()){
+	echo get_option("markosource_postadbox");
 	comments_template();
+	echo '<div class="clear"></div>';
+	echo get_option("markosource_postadbox");
 ?>
 <!--
 <?php trackback_rdf(); ?>

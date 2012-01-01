@@ -45,6 +45,8 @@
 							</div>
 						</div>
 						
+
+					<?php endwhile; ?>
 						<?php 
 						if(function_exists(wp_pagenavi)){
 							wp_pagenavi();
@@ -52,8 +54,8 @@
 							echo '<div class="nav-previous">' . get_next_posts_link( "&larr; " . __( 'Older', "markosource" ) ).'</div><div class="nav-next">' . get_previous_posts_link( __( 'Newer', 'markosource' ) . ' &rarr;' ) . '</div>';
 						}
 						?>
+					<?php echo get_option("markosource_postadbox"); ?>
 
-					<?php endwhile; ?>
 				<?php else : ?>
 					<h2><?php _e( 'Nothing Found!', 'markosource' ); ?></h2>
 					<p><?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'markosource' ); ?></p>

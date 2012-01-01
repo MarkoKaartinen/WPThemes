@@ -10,6 +10,8 @@
 				<?php the_widget( 'WP_Widget_Recent_Posts', array( 'number' => 5 ), array( 'widget_id' => '404' ) ); ?>
 				
 				<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+				
+				<?php echo get_option("markosource_postadbox"); ?>
 
 			</div>
 			
