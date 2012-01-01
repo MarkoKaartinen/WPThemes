@@ -63,6 +63,8 @@ function markosource_comment( $comment, $args, $depth ) {
 			<?php comment_reply_link( array_merge( $args, array( 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 		</div><!-- .reply -->
 	</div><!-- #comment-##  -->
+	<div class="clear"></div>
+
 
 	<?php
 			break;
@@ -71,6 +73,8 @@ function markosource_comment( $comment, $args, $depth ) {
 	?>
 	<li class="pingback">
 		<p><strong><?php _e( 'Pingback:', 'markosource' ); ?></strong> <?php comment_author_link(); ?><?php edit_comment_link( __('(edit)', 'markosource'), ' ' ); ?></p>
+		<div class="clear"></div>
+
 
 	<?php
 			break;

@@ -588,7 +588,10 @@ h3#reply-title {
 	margin: 12px 0;
 }
 
-#respond .form-submit input,
+#respond input[type=submit] {
+}
+
+#respond input[type=submit],
 #content input[type=submit],
 #sidebar input[type=submit] {
 	cursor: pointer;
@@ -623,9 +626,9 @@ h3#reply-title {
 	width: auto;
 }
 
-#respond .form-submit input:hover,
-#content input[type=submit],
-#sidebar input[type=submit] {
+#respond input[type=submit]:hover,
+#content input[type=submit]:hover,
+#sidebar input[type=submit]:hover {
 	background-position: 0 -15px;
 	color: #333;
 	text-decoration: none;
