@@ -591,6 +591,8 @@ h3#reply-title {
 #respond input[type=submit] {
 }
 
+#respond input[type=button],
+#content input[type=button],
 #respond input[type=submit],
 #content input[type=submit],
 #sidebar input[type=submit] {
@@ -626,6 +628,8 @@ h3#reply-title {
 	width: auto;
 }
 
+#respond input[type=button]:hover,
+#content input[type=button]:hover,
 #respond input[type=submit]:hover,
 #content input[type=submit]:hover,
 #sidebar input[type=submit]:hover {
@@ -649,4 +653,16 @@ h3#reply-title {
 #comment-nav-below,
 #comment-nav-above {
 	padding-bottom: 10px;
+}
+
+#ed_toolbar {
+	clear: both;
+}
+
+#ed_toolbar input, 
+#ed_toolbar span {
+	clear: none;
+	font-size: 11px;
+	height: 26px;
+	padding: 4px 4px 4px;
 }

@@ -102,7 +102,7 @@ function theme_general_settings(){
 		// Do the saving
 		update_option("markosource_hidecats", esc_attr($_POST["hidecats"]));
 		update_option("markosource_hidetags", esc_attr($_POST["hidetags"]));
-		update_option("markosource_postadbox", esc_attr($_POST["postadbox"]));
+		update_option("markosource_postadbox", stripcslashes($_POST["postadbox"]));
 		echo '<div id="message" class="updated">'.__("Settings saved!", "markosource").'</div> ';
 	}
 	
