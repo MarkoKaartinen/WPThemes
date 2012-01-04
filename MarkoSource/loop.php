@@ -72,3 +72,4 @@ if(function_exists(wp_pagenavi)){
 }
 ?>
 <div class="clear"></div>
+<?php if( !is_single() && !is_page()) { echo "<hr />" . get_option("markosource_postadbox"); } ?>

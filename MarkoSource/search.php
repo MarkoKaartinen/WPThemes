@@ -3,7 +3,7 @@
 		<div class="row" id="content">
 		    <div class="span-two-thirds">
 				<?php if ( have_posts() ) : ?>
-					<h2><?php printf( __( 'Search Results for: %s', 'twentyeleven' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
+					<h2><?php printf( __( 'Search Results for: %s', 'markosource' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 					<?php while ( have_posts() ) : the_post(); ?>
 						
 						<div class="entry">
@@ -54,6 +54,7 @@
 							echo '<div class="nav-previous">' . get_next_posts_link( "&larr; " . __( 'Older', "markosource" ) ).'</div><div class="nav-next">' . get_previous_posts_link( __( 'Newer', 'markosource' ) . ' &rarr;' ) . '</div>';
 						}
 						?>
+						<div class="clear"></div><hr />
 					<?php echo get_option("markosource_postadbox"); ?>
 
 				<?php else : ?>

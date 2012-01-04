@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MarkoSource\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-01 14:56+0200\n"
-"PO-Revision-Date: 2012-01-01 19:33+0200\n"
+"POT-Creation-Date: 2012-01-04 17:00+0200\n"
+"PO-Revision-Date: 2012-01-04 17:01+0200\n"
 "Last-Translator: Marko Kaartinen <markokaartinen@gmail.com>\n"
 "Language-Team: MarkoKaartinen.net <marko@kaartinen.me>\n"
 "MIME-Version: 1.0\n"
@@ -170,13 +170,13 @@ msgid "sticky"
 msgstr "kiinteä"
 
 # Older posts link at the bottom of page if several posts in blog.
-#: ../loop.php:68
+#: ../loop.php:70
 #: ../search.php:54
 msgid "Older"
 msgstr "Vanhemmat"
 
 # Newer posts link at the bottom of page if several pages of posts in a blog
-#: ../loop.php:69
+#: ../loop.php:71
 #: ../search.php:54
 msgid "Newer"
 msgstr "Uudemmat"
@@ -186,11 +186,11 @@ msgstr "Uudemmat"
 msgid "Search Results for: %s"
 msgstr "Hakutulokset: %s"
 
-#: ../search.php:60
+#: ../search.php:61
 msgid "Nothing Found!"
 msgstr "Mitään ei löytynyt!"
 
-#: ../search.php:61
+#: ../search.php:62
 msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
 msgstr "Pahoittelut, mutta mikään ei vastannut hakuasi. Yritäthän uudestaan eri hakusanoilla."
 
