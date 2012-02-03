@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MarkoSource\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-01-04 17:00+0200\n"
-"PO-Revision-Date: 2012-01-04 17:01+0200\n"
+"POT-Creation-Date: 2012-02-03 17:43+0200\n"
+"PO-Revision-Date: 2012-02-03 17:43+0200\n"
 "Last-Translator: Marko Kaartinen <markokaartinen@gmail.com>\n"
 "Language-Team: MarkoKaartinen.net <marko@kaartinen.me>\n"
 "MIME-Version: 1.0\n"
@@ -33,18 +33,18 @@ msgstr "Tämä kirjoitus on salasanasuojattu. Anna salasana nähdäksesi komment
 msgid "comments at the moment"
 msgstr "kommenttia tähän mennessä"
 
-#: ../comments.php:24
-#: ../comments.php:40
+#: ../comments.php:23
+#: ../comments.php:39
 msgid "&larr; Older"
 msgstr "&larr; Vanhemmat"
 
-#: ../comments.php:25
-#: ../comments.php:41
+#: ../comments.php:24
+#: ../comments.php:40
 msgid "Newer &rarr;"
 msgstr "Uudemmat &rarr;"
 
 # Comments closed text
-#: ../comments.php:52
+#: ../comments.php:51
 msgid "Comments are closed."
 msgstr "Kommentointi suljettu."
 
@@ -83,65 +83,65 @@ msgstr "%s kommenttia"
 msgid "Read more"
 msgstr "Lue lisää"
 
-#: ../functions.php:46
+#: ../functions.php:58
 msgid "says"
 msgstr "sanoo"
 
-#: ../functions.php:49
+#: ../functions.php:61
 msgid "Comment is waiting approval"
 msgstr "Kommenttisi odottaa hyväksyntää"
 
-#: ../functions.php:56
+#: ../functions.php:68
 #, php-format
 msgid "%1$s clock %2$s"
 msgstr "%1$s kello %2$s"
 
-#: ../functions.php:56
-#: ../functions.php:75
+#: ../functions.php:68
+#: ../functions.php:87
 msgid "(edit)"
 msgstr "(muokkaa)"
 
-#: ../functions.php:75
+#: ../functions.php:87
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: ../functions.php:98
+#: ../functions.php:110
 msgid "MarkoSource - General settings"
 msgstr "MarkoSource - Yleiset asetukset"
 
-#: ../functions.php:99
+#: ../functions.php:111
 msgid "Some settings for MarkoSource. Use these settings to mess the theme. Here are some basic functions and things that you can edit."
 msgstr "Joitain asetuksia MarkoSourceen. Näiden asetuksien avulla voit tuunata teemaa. Tässä joitain perusjuttuja joita voit muokata."
 
-#: ../functions.php:106
+#: ../functions.php:118
 msgid "Settings saved!"
 msgstr "Asetukset tallennettu!"
 
-#: ../functions.php:115
+#: ../functions.php:127
 msgid "Theme options"
 msgstr "Teeman asetukset"
 
-#: ../functions.php:116
+#: ../functions.php:128
 msgid "Hide categories"
 msgstr "Piilota kategoriat"
 
-#: ../functions.php:117
+#: ../functions.php:129
 msgid "Hide tags"
 msgstr "Piilota tagit"
 
-#: ../functions.php:119
+#: ../functions.php:131
 msgid "Ad options"
 msgstr "Mainosten asetukset"
 
-#: ../functions.php:120
+#: ../functions.php:132
 msgid "Posts ad box"
 msgstr "Artikkelien mainoslaatikko"
 
-#: ../functions.php:120
+#: ../functions.php:132
 msgid "(Insert code here)"
 msgstr "(laita koodi tähän)"
 
-#: ../functions.php:123
+#: ../functions.php:135
 msgid "Save settings"
 msgstr "Tallenna asetukset"
 

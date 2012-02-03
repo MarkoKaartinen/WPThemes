@@ -1,4 +1,4 @@
-	<hr />
+
 	<div id="comments">
 	<?php if ( post_password_required() ) : ?>
 		<p class="nopassword"><?php _e( 'This post is password protected. Enter the password to view any comments.', 'markosource' ); ?></p>
@@ -15,10 +15,9 @@
 	<?php // You can start editing here -- including this comment! ?>
 
 	<?php if ( have_comments() ) : ?>
-		<h2 id="comments-title" style="margin-bottom:10px;">
+		<h3 id="comments-title" style="margin-bottom:10px;">
 			<?php echo get_comments_number() . " " . __("comments at the moment", "markosource"); ?>
-		</h2>
-		<hr />
+		</h3>
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-above">
 			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older', 'markosource' ) ); ?></div>

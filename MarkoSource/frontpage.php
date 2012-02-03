@@ -32,10 +32,10 @@ foreach( $recent_posts as $recent ){
 	}
 
 	if($x == 1 OR $x == 3){
-		echo '<div class="row">';
+		echo '<div class="row-fluid">';
 	}
 
-		echo '<div class="span5">';
+		echo '<div class="span6">';
 			echo '<h3><a href="' . get_permalink($recent["ID"]) . '" title="Look '.$recent["post_title"].'" >' .   $recent["post_title"].'</a></h3>';
 			if(get_bloginfo("language") == "fi"){
 				$posttime = get_the_time('j. F', $recent["ID"]) . "ta " . get_the_time('Y', $recent["ID"]) . " kello " . get_the_time("H:i", $recent["ID"]);
@@ -44,7 +44,7 @@ foreach( $recent_posts as $recent ){
 			}
 			echo '<div class="postinfo"><span class="label info">'.$posttime.'</span></div>';
 			echo '<p>' . $sisalto . '</p>
-			<p><a class="btn small" href="' . get_permalink($recent["ID"]) . '#comments">'.$komtext.'</a> <a class="btn small" href="' . get_permalink($recent["ID"]) . '">'.__("Read more", "markosource").' &raquo;</a></p>';
+			<p><a class="btn btn-small" href="' . get_permalink($recent["ID"]) . '#comments">'.$komtext.'</a> <a class="btn btn-small" href="' . get_permalink($recent["ID"]) . '">'.__("Read more", "markosource").' &raquo;</a></p>';
 		echo "</div>";
 		
 	if($x == 2 OR $x == 4){

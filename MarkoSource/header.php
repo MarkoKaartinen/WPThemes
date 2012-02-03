@@ -8,9 +8,9 @@
 		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/bootstrap.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>" type="text/css" media="screen" />
-	
+		
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS" href="<?php bloginfo('rss2_url'); ?>" /> 
 	
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicons/favicon.ico">
@@ -21,14 +21,18 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_enqueue_script("jquery"); ?>
+
 	<?php wp_head(); ?>
+
+	<script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/markosource.js"></script>
 </head>
 <body <?php body_class() ?>>
-	<div class="container">
+	<div class="container-fluid">
 	
-		<div class="hero-unit head">
+		<div id="header">
 			<h1 id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 			<p><?php bloginfo( 'description' ); ?></p>
-			<p><?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?></p>
+			<div class="subnav"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'container_class' => '', 'menu_class' => 'nav nav-pills', 'depth' => 0, 'fallback_cb' => 'markosource_nav_fallback' ) ); ?></div>
 			<div class="clear"></div>
 		</div>

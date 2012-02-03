@@ -13,14 +13,14 @@
 			}
 			?>
 			<div class="postinfo">
-				<span class="label info"><?php echo $posttime; ?></span>
-				<span class="label info"><?php comments_popup_link( __("Comment" , "markosource"), __("1 comment" , "markosource"), '% ' . __("comments" , "markosource"), 'comments-link', __("Comments closed" , "markosource")); ?></span>
-				<?php if(function_exists('the_views')) { ?><span class="label info"><?php the_views(); ?></span><?php } ?>
-				<?php if(is_sticky()) { echo ' <span class="label important">' . __('sticky', "markosource") . '</span>'; } ?></div>
+				<span class="label label-info"><?php echo $posttime; ?></span>
+				<span class="label label-info"><?php comments_popup_link( __("Comment" , "markosource"), __("1 comment" , "markosource"), '% ' . __("comments" , "markosource"), 'comments-link', __("Comments closed" , "markosource")); ?></span>
+				<?php if(function_exists('the_views')) { ?><span class="label label-info"><?php the_views(); ?></span><?php } ?>
+				<?php if(is_sticky()) { echo ' <span class="label label-important">' . __('sticky', "markosource") . '</span>'; } ?></div>
 		<?php } ?>
 		
 		<?php the_content(__("Read more", "markosource") ." &raquo;"); ?>
-		
+		<div class="clear"></div>
 		<?php 
 		if(!is_page()){
 			if(get_option("markosource_hidecats") != "1"){
@@ -72,4 +72,4 @@ if(function_exists(wp_pagenavi)){
 }
 ?>
 <div class="clear"></div>
-<?php if( !is_single() && !is_page()) { echo "<hr />" . get_option("markosource_postadbox"); } ?>
+<?php if( !is_single() && !is_page()) { echo "" . get_option("markosource_postadbox"); } ?>

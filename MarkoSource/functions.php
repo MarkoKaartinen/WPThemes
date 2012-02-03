@@ -12,12 +12,24 @@ if ( function_exists('register_sidebar') ){
 	register_sidebar(array(
 		'name' => 'Sidebar',
 		'id' => 'widget-area-1',
-		'before_widget' => '<div class="well">',
+		'before_widget' => '<div class="alert alert-info">',
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="sidetitle">',
 		'after_title' => '</h3>',
 	));
 }
+
+if ( function_exists('register_sidebar') ){
+	register_sidebar(array(
+		'name' => 'Sidebar, no styles',
+		'id' => 'widget-area-2',
+		'before_widget' => '<div class="nostyleside">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="sidetitle">',
+		'after_title' => '</h3>',
+	));
+}
+
 add_editor_style('editor.css');
 
 load_theme_textdomain('markosource', get_template_directory() . '/languages');
@@ -140,6 +152,12 @@ function theme_about_settings(){
 	&raquo; Social media support<br />
 	&raquo; Bug fixes?</p>';
 	echo "</div>";
+}
+
+function markosource_nav_fallback(){
+	echo '<ul class="nav nav-pills">';
+		wp_list_pages(array('depth' => 1, 'title_li' => ''));
+	echo '</ul>';
 }
 
 add_action("admin_menu", "setup_theme_admin_menus");
