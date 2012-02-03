@@ -27,13 +27,15 @@ You have few ways of installing this theme.
 Changelog
 ---------
 
-1.1.0
+*1.1.0*
+
 * Ugraded Bootstrap to 2.0.0
 * Tested theme more and fixed some bugs
 * New header and navigation
 * New sidebar with no styles sidebar (mostly for ads and stuff)
 
-1.0.0
+*1.0.0*
+
 * First version of this theme
 
 Support
