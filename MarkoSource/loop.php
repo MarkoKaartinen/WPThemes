@@ -16,13 +16,14 @@
 				<span class="label label-info"><?php echo $posttime; ?></span>
 				<span class="label label-info"><?php comments_popup_link( __("Comment" , "markosource"), __("1 comment" , "markosource"), '% ' . __("comments" , "markosource"), 'comments-link', __("Comments closed" , "markosource")); ?></span>
 				<?php if(function_exists('the_views')) { ?><span class="label label-info"><?php the_views(); ?></span><?php } ?>
-				<?php if(is_sticky()) { echo ' <span class="label label-important">' . __('sticky', "markosource") . '</span>'; } ?></div>
+				<?php if(is_sticky()) { echo ' <span class="label label-important">' . __('sticky', "markosource") . '</span>'; } ?></div>
 		<?php } ?>
 		
 		<?php the_content(__("Read more", "markosource") ." &raquo;"); ?>
 		<div class="clear"></div>
 		<?php 
 		if(!is_page()){
+		
 			if(get_option("markosource_hidecats") != "1"){
 				if(has_category()){
 					echo '<div class="cats">';
@@ -64,7 +65,7 @@ if(is_single() OR is_page()){
 <?php endwhile; // End the loop. Whew. ?>
 
 <?php 
-if(function_exists(wp_pagenavi)){
+if(function_exists("wp_pagenavi")){
 	wp_pagenavi();
 }else{ 
 	echo '<div class="nav-previous">' . get_next_posts_link( "&larr; " . __( 'Older', "markosource" ) ).'</div>

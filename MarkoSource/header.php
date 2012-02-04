@@ -28,7 +28,10 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/js/markosource.js"></script>
 </head>
 <body <?php body_class() ?>>
-	<div class="container-fluid">
+<?php
+if ( ! isset( $content_width ) ) $content_width = 620;
+?>
+	<div class="container">
 	
 		<div id="header">
 			<h1 id="logo"><a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a></h1>

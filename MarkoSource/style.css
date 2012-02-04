@@ -24,10 +24,10 @@ body {
 	clear: both;
 }
 
-.container-fluid {
-	padding-top:30px;
+.container {
+	padding:30px 30px 0;
 	background: #FFF;
-	margin:0 50px;
+	margin:0 auto;
 -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
 -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
@@ -785,8 +785,19 @@ h3#reply-title {
 	display: none;
 }
 
+#searchform #s {
+	width: 180px;
+	float: left;
+}
+
 #searchsubmit {
 	padding: 5px 6px 6px !important;
+	margin-left: 3px;
+	float: left;
+}
+
+#searchsubmit:after {
+	clear: both;
 }
 
 .tagcloud {

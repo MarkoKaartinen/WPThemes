@@ -18,7 +18,7 @@ foreach( $recent_posts as $recent ){
 		$osat = explode("|||", $kokojuttu);
 		$sisalto = $osat[0];
 		if(count($osat) > 1){
-			$sisalto .= "…";
+			$sisalto .= "...";
 		}
 	}
 	
@@ -32,10 +32,10 @@ foreach( $recent_posts as $recent ){
 	}
 
 	if($x == 1 OR $x == 3){
-		echo '<div class="row-fluid">';
+		echo '<div class="row">';
 	}
 
-		echo '<div class="span6">';
+		echo '<div class="span4">';
 			echo '<h3><a href="' . get_permalink($recent["ID"]) . '" title="Look '.$recent["post_title"].'" >' .   $recent["post_title"].'</a></h3>';
 			if(get_bloginfo("language") == "fi"){
 				$posttime = get_the_time('j. F', $recent["ID"]) . "ta " . get_the_time('Y', $recent["ID"]) . " kello " . get_the_time("H:i", $recent["ID"]);

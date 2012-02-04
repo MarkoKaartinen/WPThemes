@@ -21,7 +21,7 @@
 									<span class="label info"><?php echo $posttime; ?></span>
 									<span class="label info"><?php comments_popup_link( __("Comment" , "markosource"), __("1 comment" , "markosource"), '% ' . __("comments" , "markosource"), 'comments-link', __("Comments closed" , "markosource")); ?></span>
 									<?php if(function_exists('the_views')) { ?><span class="label info"><?php the_views(); ?></span><?php } ?>
-									<?php if(is_sticky()) { echo ' <span class="label important">' . __('sticky', "markosource") . '</span>'; } ?></div>
+									<?php if(is_sticky()) { echo ' <span class="label important">' . __('sticky', "markosource") . '</span>'; } ?></div>
 								
 								<?php the_content(__("Read more", "markosource") ." &raquo;"); ?>
 								

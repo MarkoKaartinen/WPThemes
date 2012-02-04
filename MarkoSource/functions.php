@@ -1,6 +1,5 @@
 <?php
-add_theme_support( 'post-thumbnails', array( 'post' ) );
-add_theme_support('post-formats', array( 'link', 'image', 'quote', 'status', 'video', 'audio' ));
+//add_theme_support('post-formats', array( 'link', 'image', 'quote', 'status', 'video', 'audio' ));
 
 if (function_exists('register_nav_menu')) {
 	register_nav_menus( array(
@@ -13,7 +12,7 @@ if ( function_exists('register_sidebar') ){
 		'name' => 'Sidebar',
 		'id' => 'widget-area-1',
 		'before_widget' => '<div class="alert alert-info">',
-		'after_widget' => '</div>',
+		'after_widget' => '<div class="clear"></div></div>',
 		'before_title' => '<h3 class="sidetitle">',
 		'after_title' => '</h3>',
 	));
@@ -24,7 +23,7 @@ if ( function_exists('register_sidebar') ){
 		'name' => 'Sidebar, no styles',
 		'id' => 'widget-area-2',
 		'before_widget' => '<div class="nostyleside">',
-		'after_widget' => '</div>',
+		'after_widget' => '<div class="clear"></div></div>',
 		'before_title' => '<h3 class="sidetitle">',
 		'after_title' => '</h3>',
 	));
