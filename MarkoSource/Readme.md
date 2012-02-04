@@ -27,6 +27,12 @@ You have few ways of installing this theme.
 Changelog
 ---------
 
+__Version 1.1.1__
+
+* Fluid layout to normal
+* WP Theme Check fixes applied
+* Screenshot updatet
+
 __Version 1.1.0__
 
 * Ugraded Bootstrap to 2.0.0

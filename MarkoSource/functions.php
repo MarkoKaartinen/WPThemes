@@ -93,11 +93,9 @@ function markosource_comment( $comment, $args, $depth ) {
 }
 
 function setup_theme_admin_menus() {
-    add_menu_page('MarkoSource settings', 'MarkoSource', 'manage_options', 'markosource_theme_general', 'theme_settings_page');
-
-    add_submenu_page('markosource_theme_settings', 'General settins', 'General', 'manage_options', 'markosource_theme_general', 'theme_general_settings');
+    add_theme_page('MarkoSource Settings', 'MarkoSource', 'manage_options', 'markosource_theme_general', 'theme_general_settings');
     
-    add_submenu_page('markosource_theme_general', 'About', 'About', 'manage_options', 'markosource_theme_about', 'theme_about_settings');
+    add_theme_page('About MarkoSource', 'About MarkoSource', 'manage_options', 'markosource_theme_about', 'theme_about_settings');
 }
 
 function theme_settings_page() {

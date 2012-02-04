@@ -22,6 +22,10 @@
 		<?php the_content(__("Read more", "markosource") ." &raquo;"); ?>
 		<div class="clear"></div>
 		<?php 
+		if(is_single()){
+			wp_link_pages();
+		}
+		
 		if(!is_page()){
 		
 			if(get_option("markosource_hidecats") != "1"){
