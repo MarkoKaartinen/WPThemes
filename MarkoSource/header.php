@@ -8,8 +8,13 @@
 		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 	
+	<?php
+	$markosource_info = get_theme_data(get_stylesheet_uri());
+	$markosource_version = $markosource_info['Version'];
+	?>
+	
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/bootstrap.min.css" type="text/css" media="screen" />
-	<link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>" type="text/css" media="screen" />
+	<link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>?v=<?php echo $markosource_version; ?>" type="text/css" media="screen" />
 		
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS" href="<?php bloginfo('rss2_url'); ?>" /> 
 	
@@ -25,7 +30,7 @@
 	<?php wp_head(); ?>
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/markosource.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/markosource.js?v=<?php echo $markosource_version; ?>"></script>
 </head>
 <body <?php body_class() ?>>
 <?php
