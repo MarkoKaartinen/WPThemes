@@ -27,6 +27,10 @@ You have few ways of installing this theme.
 Changelog
 ---------
 
+__Version 1.1.2__
+* Max-width styles fixed
+* Added Slideshare oEmbed to functions
+
 __Version 1.1.1__
 
 * Fluid layout to normal

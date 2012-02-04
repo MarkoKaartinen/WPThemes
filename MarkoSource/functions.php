@@ -159,4 +159,8 @@ function markosource_nav_fallback(){
 
 add_action("admin_menu", "setup_theme_admin_menus");
 
+function add_oembed_slideshare(){
+	wp_oembed_add_provider( 'http://www.slideshare.net/*', 'http://api.embed.ly/v1/api/oembed');
+}
+add_action('init','add_oembed_slideshare');
 ?>
