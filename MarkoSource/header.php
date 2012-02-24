@@ -30,7 +30,6 @@
 	<?php wp_head(); ?>
 
 	<script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
-	<script src="<?php echo get_template_directory_uri(); ?>/js/markosource.js?v=<?php echo $markosource_version; ?>"></script>
 </head>
 <body <?php body_class() ?>>
 <?php

@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 		<div class="row" id="content">
-		    <div class="span-two-thirds">
+		    <div class="span8">
 				<?php if ( have_posts() ) : ?>
 					<h2><?php printf( __( 'Search Results for: %s', 'markosource' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
 					<?php while ( have_posts() ) : the_post(); ?>
@@ -64,7 +64,7 @@
 				<?php endif; ?>
 			</div>
 			
-		    <div class="span-one-third" id="sidebar">
+		    <div class="span4" id="sidebar">
 		    	<?php get_sidebar(); ?>
 		    </div>
 
