@@ -27,6 +27,12 @@ You have few ways of installing this theme.
 Changelog
 ---------
 
+__Version 1.1.4__
+
+* Fixed search page bug
+* Removed useless files
+* noborderimg style added
+
 __Version 1.1.3__
 
 * Version numbers added to theme and docs
