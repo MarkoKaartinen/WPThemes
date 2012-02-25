@@ -9,7 +9,18 @@ if (function_exists('register_nav_menu')) {
 
 if ( function_exists('register_sidebar') ){
 	register_sidebar(array(
-		'name' => 'Sidebar, no styles (top)',
+		'name' => 'Sidebar (top)',
+		'id' => 'widget-area-4',
+		'before_widget' => '<div class="alert alert-info">',
+		'after_widget' => '<div class="clear"></div></div>',
+		'before_title' => '<h3 class="sidetitle">',
+		'after_title' => '</h3>',
+	));
+}
+
+if ( function_exists('register_sidebar') ){
+	register_sidebar(array(
+		'name' => 'Sidebar, no styles (center)',
 		'id' => 'widget-area-3',
 		'before_widget' => '<div class="nostyleside">',
 		'after_widget' => '<div class="clear"></div></div>',
@@ -28,6 +39,7 @@ if ( function_exists('register_sidebar') ){
 		'after_title' => '</h3>',
 	));
 }
+
 
 if ( function_exists('register_sidebar') ){
 	register_sidebar(array(
