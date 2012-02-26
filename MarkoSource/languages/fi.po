@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: MarkoSource\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-02-03 17:43+0200\n"
-"PO-Revision-Date: 2012-02-03 17:43+0200\n"
+"POT-Creation-Date: 2012-02-26 14:53+0200\n"
+"PO-Revision-Date: 2012-02-26 14:53+0200\n"
 "Last-Translator: Marko Kaartinen <markokaartinen@gmail.com>\n"
 "Language-Team: MarkoKaartinen.net <marko@kaartinen.me>\n"
 "MIME-Version: 1.0\n"
@@ -59,91 +59,109 @@ msgid "Latest stories"
 msgstr "Viimeisimmät jutut"
 
 # No comments text to loop and front page
-#: ../frontpage.php:27
+#: ../frontpage.php:29
 msgid "No comments"
 msgstr "Ei kommentteja"
 
 # Single comment text
-#: ../frontpage.php:29
+#: ../frontpage.php:31
 #: ../loop.php:17
 #: ../search.php:22
 msgid "1 comment"
 msgstr "1 kommentti"
 
 # Example 10 comments text (x comments)
-#: ../frontpage.php:31
+#: ../frontpage.php:33
 #, php-format
 msgid "%s comments"
 msgstr "%s kommenttia"
 
 # Read more text
-#: ../frontpage.php:47
+#: ../frontpage.php:49
 #: ../loop.php:22
 #: ../search.php:26
 msgid "Read more"
 msgstr "Lue lisää"
 
-#: ../functions.php:58
+#: ../functions.php:69
 msgid "says"
 msgstr "sanoo"
 
-#: ../functions.php:61
+#: ../functions.php:72
 msgid "Comment is waiting approval"
 msgstr "Kommenttisi odottaa hyväksyntää"
 
-#: ../functions.php:68
+#: ../functions.php:79
 #, php-format
 msgid "%1$s clock %2$s"
 msgstr "%1$s kello %2$s"
 
-#: ../functions.php:68
-#: ../functions.php:87
+#: ../functions.php:79
+#: ../functions.php:98
 msgid "(edit)"
 msgstr "(muokkaa)"
 
-#: ../functions.php:87
+#: ../functions.php:98
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: ../functions.php:110
+#: ../functions.php:115
 msgid "MarkoSource - General settings"
 msgstr "MarkoSource - Yleiset asetukset"
 
-#: ../functions.php:111
+#: ../functions.php:117
+msgid ""
+"<p>MarkoSource is made by <a href=\"http://markokaartinen.net\" target=\"_blank\">Marko Kaartinen</a>. MarkoSource uses <a href=\"http://twitter.github.com/bootstrap/\" target=\"_blank\">Bootstrap</a> by Twitter as a base.<br />Theme has some settings and few features like support for WP-PageNavi and WP-PostViews.</p>\n"
+"\t\n"
+"\t<p>You can suggest features and report bugs in <a href=\"https://github.com/MarkoKaartinen/WPThemes/issues\" target=\"_blank\">Github</a> where the whole theme is available.</p>"
+msgstr ""
+"<p>MarkoSourcen on tehnyt <a href=\"http://markokaartinen.net\" target=\"_blank\">Marko Kaartinen</a>. MarkoSource käyttää Twitterin tekemää <a href=\"http://twitter.github.com/bootstrap/\" target=\"_blank\">Bootstrap</a> pohjaa. Teemalla on joitain asetuksia ja ominaisuuksia kuten tuki WP-PageNavi ja WP-PostViews lisäosille.</p>\n"
+"\t\n"
+"\t<p>Voit ehdottaa ominaisuuksia ja raportoida bugeja  <a href=\"https://github.com/MarkoKaartinen/WPThemes/issues\" target=\"_blank\">Githubissa</a>, josta voit myös ladata teeman viimeisimmän version.</p>"
+
+#: ../functions.php:121
 msgid "Some settings for MarkoSource. Use these settings to mess the theme. Here are some basic functions and things that you can edit."
 msgstr "Joitain asetuksia MarkoSourceen. Näiden asetuksien avulla voit tuunata teemaa. Tässä joitain perusjuttuja joita voit muokata."
 
-#: ../functions.php:118
+#: ../functions.php:129
 msgid "Settings saved!"
 msgstr "Asetukset tallennettu!"
 
-#: ../functions.php:127
+#: ../functions.php:139
 msgid "Theme options"
 msgstr "Teeman asetukset"
 
-#: ../functions.php:128
+#: ../functions.php:140
+msgid "Hide search box in the navbar"
+msgstr "Piilota haku valikosta"
+
+#: ../functions.php:141
 msgid "Hide categories"
 msgstr "Piilota kategoriat"
 
-#: ../functions.php:129
+#: ../functions.php:142
 msgid "Hide tags"
 msgstr "Piilota tagit"
 
-#: ../functions.php:131
+#: ../functions.php:144
 msgid "Ad options"
 msgstr "Mainosten asetukset"
 
-#: ../functions.php:132
+#: ../functions.php:145
 msgid "Posts ad box"
 msgstr "Artikkelien mainoslaatikko"
 
-#: ../functions.php:132
+#: ../functions.php:145
 msgid "(Insert code here)"
 msgstr "(laita koodi tähän)"
 
-#: ../functions.php:135
+#: ../functions.php:148
 msgid "Save settings"
 msgstr "Tallenna asetukset"
+
+#: ../header.php:47
+msgid "Search..."
+msgstr "Etsi sivustolta..."
 
 # Make a comment text
 #: ../loop.php:17
@@ -170,13 +188,13 @@ msgid "sticky"
 msgstr "kiinteä"
 
 # Older posts link at the bottom of page if several posts in blog.
-#: ../loop.php:70
+#: ../loop.php:75
 #: ../search.php:54
 msgid "Older"
 msgstr "Vanhemmat"
 
 # Newer posts link at the bottom of page if several pages of posts in a blog
-#: ../loop.php:71
+#: ../loop.php:76
 #: ../search.php:54
 msgid "Newer"
 msgstr "Uudemmat"

@@ -48,7 +48,7 @@
 
 					<?php endwhile; ?>
 						<?php 
-						if(function_exists(wp_pagenavi)){
+						if(function_exists("wp_pagenavi")){
 							wp_pagenavi();
 						}else{ 
 							echo '<div class="nav-previous">' . get_next_posts_link( "&larr; " . __( 'Older', "markosource" ) ).'</div><div class="nav-next">' . get_previous_posts_link( __( 'Newer', 'markosource' ) . ' &rarr;' ) . '</div>';

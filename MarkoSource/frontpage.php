@@ -14,9 +14,11 @@ foreach( $recent_posts as $recent ){
 	if($sisalto == ""){
 		$kokojuttu = $recent['post_content'];
 		$kokojuttu = strip_tags($kokojuttu);
+		$kokojuttu = preg_replace('/\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|$!:,.;]*[A-Z0-9+&@#\/%=~_|$]/i', '', $kokojuttu);  
 		$kokojuttu = wordwrap($kokojuttu, 200, "|||");
 		$osat = explode("|||", $kokojuttu);
 		$sisalto = $osat[0];
+
 		if(count($osat) > 1){
 			$sisalto .= "...";
 		}

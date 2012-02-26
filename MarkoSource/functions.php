@@ -1,67 +1,56 @@
 <?php
 //add_theme_support('post-formats', array( 'link', 'image', 'quote', 'status', 'video', 'audio' ));
 
-if (function_exists('register_nav_menu')) {
-	register_nav_menus( array(
-		'primary' => 'Navigation',
-	) );
-}
+register_nav_menus( array(
+	'primary' => 'Navigation',
+) );
 
-if ( function_exists('register_sidebar') ){
-	register_sidebar(array(
-		'name' => 'Sidebar (top)',
-		'id' => 'widget-area-4',
-		'before_widget' => '<div class="alert alert-info">',
-		'after_widget' => '<div class="clear"></div></div>',
-		'before_title' => '<h3 class="sidetitle">',
-		'after_title' => '</h3>',
-	));
-}
+register_sidebar(array(
+	'name' => 'Sidebar (top)',
+	'id' => 'widget-area-4',
+	'before_widget' => '<div class="alert alert-info">',
+	'after_widget' => '<div class="clear"></div></div>',
+	'before_title' => '<h3 class="sidetitle">',
+	'after_title' => '</h3>',
+));
 
-if ( function_exists('register_sidebar') ){
-	register_sidebar(array(
-		'name' => 'Sidebar, no styles (center)',
-		'id' => 'widget-area-3',
-		'before_widget' => '<div class="nostyleside">',
-		'after_widget' => '<div class="clear"></div></div>',
-		'before_title' => '<h3 class="sidetitle">',
-		'after_title' => '</h3>',
-	));
-}
+register_sidebar(array(
+	'name' => 'Sidebar, no styles (center)',
+	'id' => 'widget-area-3',
+	'before_widget' => '<div class="nostyleside">',
+	'after_widget' => '<div class="clear"></div></div>',
+	'before_title' => '<h3 class="sidetitle">',
+	'after_title' => '</h3>',
+));
 
-if ( function_exists('register_sidebar') ){
-	register_sidebar(array(
-		'name' => 'Sidebar (center)',
-		'id' => 'widget-area-1',
-		'before_widget' => '<div class="alert alert-info">',
-		'after_widget' => '<div class="clear"></div></div>',
-		'before_title' => '<h3 class="sidetitle">',
-		'after_title' => '</h3>',
-	));
-}
+register_sidebar(array(
+	'name' => 'Sidebar (center)',
+	'id' => 'widget-area-1',
+	'before_widget' => '<div class="alert alert-info">',
+	'after_widget' => '<div class="clear"></div></div>',
+	'before_title' => '<h3 class="sidetitle">',
+	'after_title' => '</h3>',
+));
 
-
-if ( function_exists('register_sidebar') ){
-	register_sidebar(array(
-		'name' => 'Sidebar, no styles (bottom)',
-		'id' => 'widget-area-2',
-		'before_widget' => '<div class="nostyleside">',
-		'after_widget' => '<div class="clear"></div></div>',
-		'before_title' => '<h3 class="sidetitle">',
-		'after_title' => '</h3>',
-	));
-}
+register_sidebar(array(
+	'name' => 'Sidebar, no styles (bottom)',
+	'id' => 'widget-area-2',
+	'before_widget' => '<div class="nostyleside">',
+	'after_widget' => '<div class="clear"></div></div>',
+	'before_title' => '<h3 class="sidetitle">',
+	'after_title' => '</h3>',
+));
 
 add_editor_style('editor.css');
 
 load_theme_textdomain('markosource', get_template_directory() . '/languages');
-add_action('after_setup_theme', 'my_theme_setup');
-function my_theme_setup(){
+add_action('after_setup_theme', 'markosource_my_theme_setup');
+function markosource_my_theme_setup(){
 	load_theme_textdomain('markosource', get_template_directory() . '/languages');
 }
 
-add_filter('get_comments_number', 'comment_count', 0);
-function comment_count( $count ) {
+add_filter('get_comments_number', 'markosource_comment_count', 0);
+function markosource_comment_count( $count ) {
 	global $id;
 	$comments_by_type = &separate_comments(get_comments('post_id=' . $id));
 	return count($comments_by_type['comment']);
@@ -115,23 +104,25 @@ function markosource_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 
-function setup_theme_admin_menus() {
-    add_theme_page('MarkoSource Settings', 'MarkoSource', 'manage_options', 'markosource_theme_general', 'theme_general_settings');
-    
-    add_theme_page('About MarkoSource', 'About MarkoSource', 'manage_options', 'markosource_theme_about', 'theme_about_settings');
+function markosource_setup_theme_admin_menus() {
+    add_theme_page('MarkoSource Settings', 'MarkoSource', 'edit_theme_options', 'markosource_theme_general', 'markosource_theme_general');
 }
 
-function theme_settings_page() {
-}
 
-function theme_general_settings(){
+function markosource_theme_general(){
 	echo '<div class="wrap">';
 	screen_icon('themes');
 	echo "<h2>".__("MarkoSource - General settings", "markosource")."</h2>";
+	
+	echo __('<p>MarkoSource is made by <a href="http://markokaartinen.net" target="_blank">Marko Kaartinen</a>. MarkoSource uses <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> by Twitter as a base.<br />Theme has some settings and few features like support for WP-PageNavi and WP-PostViews.</p>
+	
+	<p>You can suggest features and report bugs in <a href="https://github.com/MarkoKaartinen/WPThemes/issues" target="_blank">Github</a> where the whole theme is available.</p>', "markosource");
+	
 	echo "<p>".__("Some settings for MarkoSource. Use these settings to mess the theme. Here are some basic functions and things that you can edit.", "markosource")."</p>";
 	
 	if (isset($_POST["update_settings"])) {  
 		// Do the saving
+		update_option("markosource_hidesearch", esc_attr($_POST["hidesearch"]));
 		update_option("markosource_hidecats", esc_attr($_POST["hidecats"]));
 		update_option("markosource_hidetags", esc_attr($_POST["hidetags"]));
 		update_option("markosource_postadbox", stripcslashes($_POST["postadbox"]));
@@ -139,14 +130,16 @@ function theme_general_settings(){
 	}
 	
 	//get some defaults
+	$hidesearch = get_option("markosource_hidesearch");
 	$hidecats = get_option("markosource_hidecats");
 	$hidetags = get_option("markosource_hidetags");
 	$postadbox = get_option("markosource_postadbox");
 	?>
 	<form method="POST" action="">
 		<h3><?php _e("Theme options", "markosource"); ?></h3>
-		<p><input type="checkbox" name="hidecats" id="hidecats" value="1"<?php if($hidecats == "1"){ echo ' checked="checked"'; } ?> /><label for="hidecats"> <?php _e("Hide categories", "markosource"); ?></label></p>
-		<p><input type="checkbox" name="hidetags" id="hidetags" value="1"<?php if($hidetags == "1"){ echo ' checked="checked"'; } ?> /><label for="hidetags"> <?php _e("Hide tags", "markosource"); ?></label></p>
+		<p><input type="checkbox" name="hidesearch" id="hidesearch" value="1" <?php checked($hidesearch, 1); ?> /><label for="hidesearch"> <?php _e("Hide search box in the navbar", "markosource"); ?></label></p>
+		<p><input type="checkbox" name="hidecats" id="hidecats" value="1" <?php checked($hidecats, 1); ?> /><label for="hidecats"> <?php _e("Hide categories", "markosource"); ?></label></p>
+		<p><input type="checkbox" name="hidetags" id="hidetags" value="1" <?php checked($hidetags, 1); ?><label for="hidetags"> <?php _e("Hide tags", "markosource"); ?></label></p>
 		
 		<h3><?php _e("Ad options", "markosource"); ?></h3>
 		<p><?php _e("Posts ad box", "markosource"); ?> <small><?php _e("(Insert code here)", "markosource"); ?></small><br />
@@ -158,32 +151,16 @@ function theme_general_settings(){
 	echo "</div>";
 }
 
-function theme_about_settings(){
-	echo '<div class="wrap">';
-	screen_icon('themes');
-	echo "<h2>About MarkoSource</h2>";
-	echo '<p>MarkoSource is made by <a href="http://markokaartinen.net" target="_blank">Marko Kaartinen</a>. MarkoSource uses <a href="http://twitter.github.com/bootstrap/" target="_blank">Bootstrap</a> by Twitter as a base.<br />Theme has some settings and few features like support for WP-PageNavi and WP-PostViews.</p>
-	
-	<p>You can suggest features and report bugs in <a href="https://github.com/MarkoKaartinen/WPThemes/tree/master/MarkoSource" target="_blank">Github</a> where the whole theme is available.</p>
-	
-	<p><strong>ToDo list for next version</strong><br />
-	&raquo; Post formats support<br />
-	&raquo; Better browser support<br />
-	&raquo; Social media support<br />
-	&raquo; Bug fixes?</p>';
-	echo "</div>";
-}
-
 function markosource_nav_fallback(){
 	echo '<ul class="nav nav-pills">';
 		wp_list_pages(array('depth' => 1, 'title_li' => ''));
 	echo '</ul>';
 }
 
-add_action("admin_menu", "setup_theme_admin_menus");
+add_action("admin_menu", "markosource_setup_theme_admin_menus");
 
-function add_oembed_slideshare(){
+function markosource_add_oembed_slideshare(){
 	wp_oembed_add_provider( 'http://www.slideshare.net/*', 'http://api.embed.ly/v1/api/oembed');
 }
-add_action('init','add_oembed_slideshare');
+add_action('init','markosource_add_oembed_slideshare');
 ?>
