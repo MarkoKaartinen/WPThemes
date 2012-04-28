@@ -41,6 +41,15 @@ register_sidebar(array(
 	'after_title' => '</h3>',
 ));
 
+register_sidebar(array(
+	'name' => 'Frontpage',
+	'id' => 'widget-area-5',
+	'before_widget' => '<hr /><div>',
+	'after_widget' => '<div class="clear"></div></div>',
+	'before_title' => '<h2>',
+	'after_title' => '</h2>',
+));
+
 add_editor_style('editor.css');
 
 load_theme_textdomain('markosource', get_template_directory() . '/languages');

@@ -44,7 +44,7 @@ if ( ! isset( $content_width ) ) $content_width = 620;
 								<div class="input-prepend">
 									<form action="<?php echo home_url( '/' ); ?>" method="post">
 										<span class="add-on" style="float:left;"><i class="icon-search"></i></span>
-										<input class="span2" style="float:left;" id="inputIcon" type="text" placeholder="<?php _e("Search...", "markosource"); ?>" name="s">
+										<input class="span3" style="float:left;" id="inputIcon" type="text" placeholder="<?php _e("Search...", "markosource"); ?>" name="s">
 									</form>
 								</div>
 							</div>

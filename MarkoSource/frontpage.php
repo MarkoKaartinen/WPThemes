@@ -5,6 +5,7 @@
 
 <hr />
 
+
 <h2><?php _e("Latest stories", "markosource"); ?></h2>
 <?php
 $recent_posts = wp_get_recent_posts( array( 'numberposts' => 4, 'post_status' => 'publish' ) );
@@ -58,5 +59,15 @@ foreach( $recent_posts as $recent ){
 	$x++;
 }
 echo '<div class="clear"><br /></div>';
+?>
+<?php
 echo get_option("markosource_postadbox");
 ?>
+<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('Frontpage') ) : ?>
+<?php endif; ?>
+
+<hr />
+<?php
+echo get_option("markosource_postadbox");
+?>
+
