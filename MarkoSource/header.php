@@ -39,15 +39,11 @@ if ( ! isset( $content_width ) ) $content_width = 620;
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '', 'container_class' => '', 'menu_class' => 'nav nav-pills', 'depth' => 0, 'fallback_cb' => 'markosource_nav_fallback' ) ); ?>
 				<?php if(get_option("markosource_hidesearch") != "1"){ ?>
 					<div class="pull-right navihakulomake">
-						<div class="control-group">
-							<div class="controls">
-								<div class="input-prepend">
-									<form action="<?php echo home_url( '/' ); ?>" method="post">
-										<span class="add-on" style="float:left;"><i class="icon-search"></i></span>
-										<input class="span3" style="float:left;" id="inputIcon" type="text" placeholder="<?php _e("Search...", "markosource"); ?>" name="s">
-									</form>
-								</div>
-							</div>
+						<div class="input-prepend" style="float:left;">
+							<form action="<?php echo home_url( '/' ); ?>" method="post">
+								<span class="add-on" style="float:left;"><i class="icon-search"></i></span>
+								<input class="span2" style="float:left;" id="inputIcon" type="text" placeholder="<?php _e("Search...", "markosource"); ?>" name="s">
+							</form>
 						</div>
 					</div><!-- /navihakulomake -->
 				<?php } ?>
